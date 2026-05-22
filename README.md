@@ -83,8 +83,8 @@ With this JSON body:
 
 ```json
 {
-  "text": "This is a test sentence."
+  "features": [5.1, 3.5, 1.4, 0.2]
 }
 ```
 
-The current project returns a dummy prediction. Later, you can replace the dummy logic in `app/model_service.py` with your real AI model code.
+The API predicts from the values you send in `features`. The order is `sepal_length`, `sepal_width`, `petal_length`, `petal_width`.
