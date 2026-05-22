@@ -87,4 +87,4 @@ With this JSON body:
 }
 ```
 
-The current project returns a dummy prediction. Later, you can replace the dummy logic in `app/model_service.py` with your real AI model code.
+The current project trains a small sample spam/ham classifier when the API starts. Later, you can replace the sample data or load your own saved model in `app/model_service.py`.
