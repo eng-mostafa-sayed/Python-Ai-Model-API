@@ -83,8 +83,10 @@ With this JSON body:
 
 ```json
 {
-  "text": "This is a test sentence."
+  "study_hours": 6,
+  "attendance_percentage": 80,
+  "previous_grade": 70
 }
 ```
 
-The current project returns a dummy prediction. Later, you can replace the dummy logic in `app/model_service.py` with your real AI model code.
+The API predicts from the student values you send. The current model predicts `Pass` or `Fail`.
