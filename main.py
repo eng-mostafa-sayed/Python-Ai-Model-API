@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.model_service import predict_text
+from app.model_service import predict_student
 from app.schemas import PredictionRequest
 
 
@@ -22,5 +22,9 @@ def read_root():
 
 @app.post("/predict")
 def predict(request: PredictionRequest):
-    """Run prediction logic for the text sent by the user."""
-    return predict_text(request.text)
+    """Run prediction on the student data sent by the user."""
+    return predict_student(
+        request.study_hours,
+        request.attendance_percentage,
+        request.previous_grade,
+    )
