@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.model_service import predict_text
+from app.model_service import predict_iris
 from app.schemas import PredictionRequest
 
 
@@ -22,5 +22,5 @@ def read_root():
 
 @app.post("/predict")
 def predict(request: PredictionRequest):
-    """Run prediction logic for the text sent by the user."""
-    return predict_text(request.text)
+    """Run prediction on the features sent in the API request."""
+    return predict_iris(request.features)
